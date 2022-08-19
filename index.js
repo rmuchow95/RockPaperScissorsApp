@@ -7,7 +7,10 @@ paper.addEventListener("click", clickPaper);
 scissors.addEventListener("click", clickScissors);
 
 function clickRock() {
-  alert ("The user chose rock");
+  const paragraphElement = document.getElementById("response");
+  const node = document.createTextNode("The user chose rock");
+  
+  paragraphElement.appendChild(node);
 }
 function clickPaper() {
   alert ("The user chose paper");
