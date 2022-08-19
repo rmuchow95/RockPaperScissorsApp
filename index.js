@@ -9,14 +9,23 @@ scissors.addEventListener("click", clickScissors);
 function clickRock() {
   const paragraphElement = document.getElementById("response");
   const node = document.createTextNode("The user chose rock");
-  
   paragraphElement.appendChild(node);
+  const node1 = document.createTextNode("The computer chose " + computerChoice);
+  paragraphElement.appendChild(node1);
 }
 function clickPaper() {
-  alert ("The user chose paper");
+  const paragraphElement = document.getElementById("response");
+  const node = document.createTextNode("The user chose paper");
+  paragraphElement.appendChild(node);
+  const node1 = document.createTextNode("The computer chose " + computerChoice);
+  paragraphElement.appendChild(node1);
 }
 function clickScissors() {
-  alert ("The user chose scissors");
+  const paragraphElement = document.getElementById("response");
+  const node = document.createTextNode("The user chose scissors");
+  paragraphElement.appendChild(node);
+  const node1 = document.createTextNode("The computer chose " + computerChoice);
+  paragraphElement.appendChild(node1);
 }
 
 
@@ -25,5 +34,7 @@ function getRandomInt(max) {
   return Math.floor(Math.random() * max);
 }
 const randomNum = getRandomInt(rps.length);
+const computerChoice = rps[randomNum];
 
-console.log(getRandomInt(rps.length));
+
+console.log('The computer chose', computerChoice);
