@@ -18,11 +18,24 @@ function clickRock() {
   resultElement.appendChild(node1);
 
   if (randomNum == 0) {
-    console.log("It was a tie!");
+    const winnerElement = document.getElementById("winner");
+    winnerElement.innerHTML = "";
+    const tie = document.createTextNode("It was a tie!");
+    winnerElement.appendChild(tie);
+
+
   } else if (randomNum == 1) {
-    console.log("The computer won!");
+    const winnerElement = document.getElementById("winner");
+    winnerElement.innerHTML = "";
+    const computerWin = document.createTextNode("The computer won!");
+    winnerElement.appendChild(computerWin);
+
+
   } else if (randomNum == 2) {
-    console.log("The user won!");
+    const winnerElement = document.getElementById("winner");
+    winnerElement.innerHTML = "";
+    const userWin = document.createTextNode("The user won!");
+    winnerElement.appendChild(userWin);
   }
 }
 
@@ -38,11 +51,24 @@ function clickPaper() {
   resultElement.appendChild(node1);
 
   if (randomNum == 0) {
-    console.log("The user won!");
+    const winnerElement = document.getElementById("winner");
+    winnerElement.innerHTML = "";
+    const userWin = document.createTextNode("The user won!");
+    winnerElement.appendChild(userWin);
+
+
   } else if (randomNum == 1) {
-    console.log("It was a tie!");
+    const winnerElement = document.getElementById("winner");
+    winnerElement.innerHTML = "";
+    const tie = document.createTextNode("It was a tie!");
+    winnerElement.appendChild(tie);
+
+
   } else if (randomNum == 2) {
-    console.log("The computer won!");
+    const winnerElement = document.getElementById("winner");
+    winnerElement.innerHTML = "";
+    const computerWin = document.createTextNode("The computer won!");
+    winnerElement.appendChild(computerWin);
   }
 }
 
@@ -58,11 +84,24 @@ function clickScissors() {
   resultElement.appendChild(node1);
 
   if (randomNum == 0) {
-    console.log("The computer won!");
+    const winnerElement = document.getElementById("winner");
+    winnerElement.innerHTML = "";
+    const computerWin = document.createTextNode("The computer won!");
+    winnerElement.appendChild(computerWin);
+
+
   } else if (randomNum == 1) {
-    console.log("The user won!");
+    const winnerElement = document.getElementById("winner");
+    winnerElement.innerHTML = "";
+    const userWin = document.createTextNode("The user won!");
+    winnerElement.appendChild(userWin);
+
+
   } else if (randomNum == 2) {
-    console.log("It was a tie!");
+    const winnerElement = document.getElementById("winner");
+    winnerElement.innerHTML = "";
+    const tie = document.createTextNode("It was a tie!");
+    winnerElement.appendChild(tie);
   }
 
   }
