@@ -2,7 +2,7 @@
 
 _A simple Rock Paper Scissors Gaming App created entirely in Javascript and HTML_
 
-View it [here]()
+View it [here](https://rmuchow95.github.io/RockPaperScissorsApp/)
 
 <img src="Images/RPS App.png">
 
