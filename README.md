@@ -15,6 +15,3 @@ This is my fourth project, created entirely with vanilla Javascript, HTML and CS
 Rachel Muchow
 <br><br>
 Full-Stack Web Developer
-
-
-
