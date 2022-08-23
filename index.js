@@ -1,6 +1,6 @@
 const rockPaperScissors = ['rock', 'paper', 'scissors'];
-
-//Click event applied to images//
+let computerScore = 0;
+let userScore = 0;
 
 rock.addEventListener("click", clickRock);
 paper.addEventListener("click", clickPaper);
@@ -23,22 +23,23 @@ function clickRock() {
     const tie = document.createTextNode("It was a tie!");
     winnerElement.appendChild(tie);
 
-
   } else if (randomNum == 1) {
     const winnerElement = document.getElementById("winner");
     winnerElement.innerHTML = "";
     const computerWin = document.createTextNode("The computer won!");
     winnerElement.appendChild(computerWin);
-
+    computerScore++;
+    document.getElementById("trackScore").textContent=`(User) ${userScore} -  ${computerScore} (Computer)`;
 
   } else if (randomNum == 2) {
     const winnerElement = document.getElementById("winner");
     winnerElement.innerHTML = "";
     const userWin = document.createTextNode("The user won!");
     winnerElement.appendChild(userWin);
+    userScore++;
+    document.getElementById("trackScore").textContent=`(User) ${userScore} -  ${computerScore} (Computer)`;
   }
 }
-
 function clickPaper() {
   const paragraphElement = document.getElementById("response");
   paragraphElement.innerHTML = "";
@@ -55,7 +56,8 @@ function clickPaper() {
     winnerElement.innerHTML = "";
     const userWin = document.createTextNode("The user won!");
     winnerElement.appendChild(userWin);
-
+    userScore++;
+    document.getElementById("trackScore").textContent=`(User) ${userScore} -  ${computerScore} (Computer)`;
 
   } else if (randomNum == 1) {
     const winnerElement = document.getElementById("winner");
@@ -63,15 +65,15 @@ function clickPaper() {
     const tie = document.createTextNode("It was a tie!");
     winnerElement.appendChild(tie);
 
-
   } else if (randomNum == 2) {
     const winnerElement = document.getElementById("winner");
     winnerElement.innerHTML = "";
     const computerWin = document.createTextNode("The computer won!");
     winnerElement.appendChild(computerWin);
+    computerScore++;
+    document.getElementById("trackScore").textContent=`(User) ${userScore} -  ${computerScore} (Computer)`;
   }
 }
-
 function clickScissors() {
   const paragraphElement = document.getElementById("response");
   paragraphElement.innerHTML = "";
@@ -88,14 +90,16 @@ function clickScissors() {
     winnerElement.innerHTML = "";
     const computerWin = document.createTextNode("The computer won!");
     winnerElement.appendChild(computerWin);
-
+    computerScore++;
+    document.getElementById("trackScore").textContent=`(User) ${userScore} - ${computerScore} (Computer)`;
 
   } else if (randomNum == 1) {
     const winnerElement = document.getElementById("winner");
     winnerElement.innerHTML = "";
     const userWin = document.createTextNode("The user won!");
     winnerElement.appendChild(userWin);
-
+    userScore++;
+    document.getElementById("trackScore").textContent=`(User) ${userScore} - ${computerScore} (Computer)`;
 
   } else if (randomNum == 2) {
     const winnerElement = document.getElementById("winner");
@@ -103,21 +107,7 @@ function clickScissors() {
     const tie = document.createTextNode("It was a tie!");
     winnerElement.appendChild(tie);
   }
-
   }
-
-//Computer's choice selected upon click event//
 function getRandomInt(max) {
   return Math.floor(Math.random() * max);
-}
-
-function printResults() {
-  switch (computerChoice) {
-    case "0":
-      console.log("It was a tie!");
-    case "1":
-      console.log("The computer won!");
-    case "2":
-      console.log("The user won!");
-  }
 }
