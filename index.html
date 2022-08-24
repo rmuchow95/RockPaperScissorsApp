@@ -6,17 +6,22 @@
   </head>
   <body>
     <div class="header">
-      <h1>Rock, Paper, Scissors!</h1>
-      <h3 id="response"></h3>
-      <h3 id="result"></h3>
-      <h3 id="winner"></h3>
+      <h1 class="title">Rock, Paper, Scissors!</h1>
+      <h3 class="response" id="response"></h3>
+      <h3 class="result" id="result"></h3>
+      <h3 class="winner" id="winner"></h3>
       <h3>Current score:</h3>
-      <h3 id="trackScore">(User) 0 - 0 (Computer)</h3>
+      <h3 class="trackScore" id="trackScore">(User) 0 - 0 (Computer)</h3>
     </div>
-    <div class="container">
-      <img id="rock" src="Images/Rock.svg" alt="Rock" />
-      <img id="paper" src="Images/Paper.svg" alt="Paper" />
-      <img id="scissors" src="Images/Scissors.svg" alt="Scissors" />
+    <div class="userChoices" id="userChoices">
+      <img class="weapon" id="rock" src="Images/Rock.svg" alt="Rock" />
+      <img class="weapon" id="paper" src="Images/Paper.svg" alt="Paper" />
+      <img
+        class="weapon"
+        id="scissors"
+        src="Images/Scissors.svg"
+        alt="Scissors"
+      />
     </div>
     <script src="index.js"></script>
   </body>
