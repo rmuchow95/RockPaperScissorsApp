@@ -14,13 +14,16 @@ p {
 img {
   width: 250px;
   height: 250px;
-  vertical-align: middle;
-}
-.weapon:hover {
-  background-color: blueviolet;
-}
-.weapon {
-  display: block;
+  text-align: center;
   margin-left: auto;
   margin-right: auto;
+}
+.weapon1:hover {
+  border: 2px solid blueviolet;
+}
+.weapon2:hover {
+  border: 2px solid red;
+}
+.weapon3:hover {
+  border: 2px solid green;
 }

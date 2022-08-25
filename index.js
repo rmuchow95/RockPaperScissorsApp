@@ -19,8 +19,7 @@ function clickRPS(userChoice) {
   const paragraphElement = document.getElementById("response");
   paragraphElement.textContent = "";
 
-  const node = document.createTextNode('The user chose ${userChoice}'); 
-
+  const node = document.createTextNode(`The user chose ${userChoice}`); 
   paragraphElement.appendChild(node);
 
   let randomNum = getRandomInt(rockPaperScissors.length);
@@ -29,23 +28,33 @@ function clickRPS(userChoice) {
   resultElement.textContent = "";
 
   const computerChoice = rockPaperScissors[randomNum];
-
-  const node1 = document.createTextNode('The computer chose ${computerChoice}')
-
+  const node1 = document.createTextNode(`The computer chose ${computerChoice}`)
   resultElement.appendChild(node1);
 
-  const message = resultMessage(userChoice, computerChoice);
+  const message = resultsMessage(userChoice, computerChoice);
 
-  if (message === 'The computer won!') computerScore++;
-  if (message === 'The user won!') userScore++;
+  if (message === "The computer won!") computerScore++;
+  if (message === "The user won!") userScore++;
 
-  const trackScore = document.getElementById("trackScore")
+  const trackScore = document.getElementById("trackScore");
   trackScore.textContent= `(User) ${userScore} - ${computerScore} (Computer)`;
 
   const winnerElement = document.getElementById('winner');
   winnerElement.textContent = message;
+
+function resultsMessage(userChoice, computerChoice) {
+  if (userChoice === computerChoice) return "It was a tie!";
+  switch (userChoice) {
+    case "rock": 
+      return computerChoice === "paper" ? "The computer won!" : "The user won!";
+    case "paper":
+      return computerChoice === "rock" ? "The user won!" : "The computer won!";
+    case "scissors":
+      return computerChoice === "rock" ? "The computer won!" : "The user won!";
+  }
 }
 
 function getRandomInt(max) {
   return Math.floor(Math.random() * max);
+}
 }
